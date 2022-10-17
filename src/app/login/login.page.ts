@@ -22,6 +22,19 @@ export class LoginPage implements OnInit {
     this.verificarLogin();
   }
 
+  
+  async verificarLogin(){
+    const auth = getAuth();
+    firebase.onAuthStateChanged(auth,function(user) {
+      if (user) {
+        console.log('Esta logeado el usuario:',user.displayName)
+      }else {
+        console.log('No está logeado')
+      }
+
+    });
+  }
+  
   onGoogleLogin() {
     var provider = new firebase.GoogleAuthProvider();
     const auth = getAuth();
@@ -36,20 +49,7 @@ export class LoginPage implements OnInit {
       }
     )
   }
-
-  async verificarLogin(){
-    const auth = getAuth();
-    firebase.onAuthStateChanged(auth,function(user) {
-      if (user) {
-        console.log('Esta logeado el usuario:',user.displayName)
-      }else {
-        console.log('No está logeado')
-      }
-
-    });
-  }
-    
-
+  
   async onGitHubLogin() {
     var provider = new firebase.GithubAuthProvider();
     const auth = getAuth();
@@ -85,7 +85,7 @@ export class LoginPage implements OnInit {
       const user = this.fire.login(email,pass)
       if (user) {
         console.log('User->',user)
-        this.router.navigate(['inicio-alumno'])
+        this.router.navigate(['/inicio-alumno'])
       }
     } catch (error){
       console.log('Error->',error)
