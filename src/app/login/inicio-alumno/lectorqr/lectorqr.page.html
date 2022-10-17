@@ -11,6 +11,7 @@
   <ion-card>
     <img src="./assets/scaner.png" />
     <ion-card-subtitle>Disponible durante 90 minutos </ion-card-subtitle>
+    <qrcode [qrdata]="qrCodeString" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
 
   </ion-card>
 </ion-content>

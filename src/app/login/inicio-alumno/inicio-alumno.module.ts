@@ -8,6 +8,7 @@ import { InicioAlumnoPageRoutingModule } from './inicio-alumno-routing.module';
 
 import { InicioAlumnoPage } from './inicio-alumno.page';
 
+
 @NgModule({
   imports: [
     CommonModule,

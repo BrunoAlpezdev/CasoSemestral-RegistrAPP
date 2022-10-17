@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LectorqrPage implements OnInit {
 
+  qrCodeString = 'codigo de qr'
+
   constructor() { }
 
   ngOnInit() {
