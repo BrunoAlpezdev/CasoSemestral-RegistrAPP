@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Asistencia del curso</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+          <ion-list-header> ASISTENCIA </ion-list-header>
+          <ion-item>
+            <ion-label>Bruno Perez</ion-label>
+            <ion-note slot="end" color="danger">0%</ion-note>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Marcelo Vivanco</ion-label>
+            <ion-note slot="end" color="secondary">99%</ion-note>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Matias Fuentes</ion-label>
+            <ion-note slot="end" color="tertiary">89%</ion-note>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Marcela VIvanca</ion-label>
+            <ion-note slot="end" color="success">99%</ion-note>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Bastian Palma</ion-label>
+            <ion-note slot="end" color="warning">76%</ion-note>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Matias Perez</ion-label>
+            <ion-note slot="end" color="success">95%</ion-note>
+          </ion-item>
+        </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <div class="fix-footer">
+      <ion-fab horizontal="center" vertical="top" >
+        <ion-fab-button [routerLink]="['/qr']" color="success">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </div>
+  </ion-toolbar>
+</ion-footer>
