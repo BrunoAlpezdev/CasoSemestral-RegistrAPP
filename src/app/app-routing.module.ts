@@ -60,6 +60,10 @@ const routes: Routes = [
   {
     path: 'lectorqr',
     loadChildren: () => import('./login/inicio-alumno/lectorqr/lectorqr.module').then( m => m.LectorqrPageModule)
+  },
+  {
+    path: 'strapip',
+    loadChildren: () => import('./strapip/strapip.module').then( m => m.StrapipPageModule)
   }
   
 ];
