@@ -12,6 +12,8 @@ export class QrPage implements OnInit {
 
   nombre:string;
 
+  qrCodeString = "codigo de qr";
+
   ngOnInit() {
     this.nombre = this.activatedRoute.snapshot.paramMap.get("name")
   }
